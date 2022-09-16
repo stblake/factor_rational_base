@@ -18,7 +18,7 @@ import math
 import gmpy2
 from gmpy2 import mpz, mpq, next_prime
 
-def factor_rational_base(N, initial_base = 3, specific_base = 1, return_base = False, verbose = False):
+def factor_rational_base(N, initial_base = 3, specific_base = 1, max_base = 0, return_base = False, verbose = False):
 	"""GNU MP-based implementation of a fast factorisation algorithm for some semiprimes."""
     
 	if type(N) is int:
@@ -66,6 +66,10 @@ def factor_rational_base(N, initial_base = 3, specific_base = 1, return_base = F
 				else:
 					return fac
 		j += 1
+		if max_base > 0 and j > max_base:
+			if verbose:
+				print(f'Exiting as we reached max_base.')
+			break
 	return 1
 
 
