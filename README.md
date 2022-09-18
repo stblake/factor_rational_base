@@ -13,7 +13,7 @@ The algorithm implemented here, `factor_rational_base`, will factor semiprimes, 
 
 
 ### Example
-`
+```
 import math
 import random
 import gmpy2
@@ -87,4 +87,4 @@ CPU times: user 346 ms, sys: 5.5 ms, total: 352 ms
 Wall time: 352 ms
 mpz(45131317303089645649402477791361)
 
-`
+```
