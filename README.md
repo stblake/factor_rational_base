@@ -1,6 +1,6 @@
 ### Fast factorisation of some semiprimes
 
-The algorithm implemented here, `factor_rational_base`, will factor semiprimes, $N = p q$ when $p \gg q$, $p = \text{next_prime}(c (a/b)^n + \Delta)$, where $c,n$ are integer constants, $a,b$ are sufficiently small to be found by an exhaustive search and $\Delta < (a/b)^n/q$. 
+The algorithm implemented here, `factor_rational_base`, will factor semiprimes, $N = p q$ when $p \gg q$, $p = \verb{next_prime}(c (a/b)^n + \Delta)$, where $c,n$ are integer constants, $a,b$ are sufficiently small to be found by an exhaustive search and $\Delta < (a/b)^n/q$. 
 
 Some notes on `factor_rational_base`: 
 
