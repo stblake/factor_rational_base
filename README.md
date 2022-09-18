@@ -10,3 +10,81 @@ The algorithm implemented here, `factor_rational_base`, will factor semiprimes, 
 * Much like other existing algorithms for integer factorisation, it is exceedingly unlikely that `factor_rational_base` will quickly factor an arbitrary, large semiprime.
 
 * `factor_rational_base` cannot quickly factor any semiprimes from the RSA Factoring Challenge.
+
+
+### Example
+`
+import math
+import random
+import gmpy2
+from gmpy2 import mpz, mpq, next_prime
+from factor_rational_base import factor_rational_base
+
+q = next_prime(random.randint(10**31, 10**32))
+p = next_prime(int(mpq(13,3)**128)+123456879487639485857923456789)
+print(p, q)
+N = p*q
+print(N)
+
+3260081754204342696614851730588737100566813075532442238801303354056997440025572973 45131317303089645649402477791361
+147131784083009296687436354719243871894564758968612490088337521714811692655848217307415504613330168146531574486253
+
+%time factor_rational_base(N, verbose = True)
+
+3
+    2, 1
+4
+    3, 1
+5
+    4, 1
+    3, 2
+6
+    5, 1
+7
+    6, 1
+    5, 2
+    4, 3
+8
+    7, 1
+    5, 3
+9
+    8, 1
+    7, 2
+    5, 4
+10
+    9, 1
+    7, 3
+11
+    10, 1
+    9, 2
+    8, 3
+    7, 4
+    6, 5
+12
+    11, 1
+    7, 5
+13
+    12, 1
+    11, 2
+    10, 3
+    9, 4
+    8, 5
+    7, 6
+14
+    13, 1
+    11, 3
+    9, 5
+15
+    14, 1
+    13, 2
+    11, 4
+    8, 7
+16
+    15, 1
+    13, 3
+k = 1, q = 45131317303089645649402477791360, n_gcd = 1018, n_divs = 128
+CPU times: user 346 ms, sys: 5.5 ms, total: 352 ms
+Wall time: 352 ms
+mpz(45131317303089645649402477791361)
+
+`
