@@ -14,7 +14,7 @@ The algorithm implemented here, `factor_rational_base`, will factor semiprimes, 
 
 ### Example
 
-In the following example we construct the semiprime $N = pq$, where $p \approx (13/3)^128$ and factor $N$ using `factor_rational_base`: 
+In the following example we construct the semiprime $N = pq$, where $p \approx (13/3)^{128}$. We quickly obtain a factorisation of $N$ using `factor_rational_base`: 
 
 
 ```
