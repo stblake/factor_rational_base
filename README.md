@@ -13,6 +13,10 @@ The algorithm implemented here, `factor_rational_base`, will factor semiprimes, 
 
 
 ### Example
+
+In the following example we construct the semiprime $N = pq$, where $p \approx (13/3)^128$ and factor $N$ using `factor_rational_base`: 
+
+
 ```
 import math
 import random
@@ -20,8 +24,9 @@ import gmpy2
 from gmpy2 import mpz, mpq, next_prime
 from factor_rational_base import factor_rational_base
 
+
 q = next_prime(random.randint(10**31, 10**32))
-p = next_prime(int(mpq(13,3)**128)+123456879487639485857923456789)
+p = next_prime(int(mpq(13,3)**128) + 123456879487639485857923456789)
 print(p, q)
 N = p*q
 print(N)
